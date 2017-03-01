@@ -8,6 +8,7 @@ namespace test
     {
         private DateTime time;
         private static Timer aTimer;
+        
         public Alarm(DateTime time)
         {
             this.time = time;
@@ -15,6 +16,7 @@ namespace test
             aTimer.Elapsed += new ElapsedEventHandler(WakeUpOnTime);
             aTimer.Enabled = true;
         }
+        
         //method to inform user when it's time to wake up
         private void WakeUpOnTime(object source, ElapsedEventArgs e)
         {
